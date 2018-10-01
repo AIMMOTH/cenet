@@ -67,13 +67,10 @@ object Index {
               button(attr("ng-click") := "controller.get()", cls := "button", attr("ng-disabled") := "!controller.loaded", disabled := true)("Get"),
               textarea(disabled := true, attr("ng-model") := "controller.output")),
 
-            p("Source at ")(
-              a(target := "_blank", href := "https://github.com/AIMMOTH/scala-stack-angular")("GitHub")),
-
             /*
        * TODO: All javascript could be read from resources and bundled into one file.
        */
-            script(src := "/js/vendor/angular-1.5.8.js"),
+            script(src := s"/js/vendor/angular-1.7.4$min.js"),
             script(src := "/js/vendor/jquery.js"),
             script(src := "/js/vendor/what-input.js"),
             script(src := s"/js/vendor/foundation$min.js"),
